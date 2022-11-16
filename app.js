@@ -1,5 +1,5 @@
-const csvFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\harvest_time_report_from2022-10-17to2022-10-23.csv";
-const jsonFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\harvest_time_report_from2022-10-17to2022-10-23.json";
+const csvFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\CSV's\\harvest_time_report_from2022-10-31to2022-11-06.csv";
+const jsonFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\JSON's\\harvest_time_report_from2022-10-31to2022-11-06.json";
 
 const fs = require("fs");
 csv = fs.readFileSync(csvFilePath)
@@ -36,7 +36,7 @@ for (let i = 1; i < data.length - 1; i++) { //data.length - 1
     if (j === 6 || j === 15 || j === 16) jsonProperties[j] = jsonProperties[j] * 1;
   }
 
-
+  // combine headers + values
   if( i !== 0) {
     let headerCount = 0;
     let jsonObject = {};
