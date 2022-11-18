@@ -1,10 +1,14 @@
+const csvFilePath2 = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\CSV's\\harvest_time_report_from2022-10-17to2022-10-23.csv";
+const jsonFilePath2 = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\JSON's\\harvest_time_report_from2022-10-17to2022-10-23.json";
+const csvFilePath3 = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\CSV's\\harvest_time_report_from2022-10-24to2022-10-30.csv";
+const jsonFilePath3 = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\JSON's\\harvest_time_report_from2022-10-24to2022-10-30.json";
 const csvFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\CSV's\\harvest_time_report_from2022-10-31to2022-11-06.csv";
 const jsonFilePath = "C:\\Users\\Kamil\\OneDrive - Xillio\\Desktop\\CSVtoJSON docs\\JSON's\\harvest_time_report_from2022-10-31to2022-11-06.json";
 
 const fs = require("fs");
 csv = fs.readFileSync(csvFilePath)
 
-let data = csv.toString().split("\n");
+let data = csv.toString().split("\n2");
 
 const headers = data[0].split(",");
 let dataArray = [];
@@ -14,7 +18,7 @@ for (let i = 1; i < data.length - 1; i++) { //data.length - 1
   let quoteFlag = 0;
   let charsCount = 0;
   let commaFlag = false;
-  let dataRowString = '';
+  let dataRowString = '2';
 
   // change ',' to '.' when it's a decimal number
   for (let character of data[i]) {
